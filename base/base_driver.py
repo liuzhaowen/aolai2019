@@ -1,7 +1,7 @@
 from appium import webdriver
 
 
-def init_driver():
+def init_driver(no_reset=True):
     desired_caps = dict()
     desired_caps['platformName'] = 'Android'
     desired_caps['platformVersion'] = '5.1'
@@ -9,6 +9,8 @@ def init_driver():
     desired_caps['appPackage'] = 'com.yunmall.lc'
     desired_caps['appActivity'] = 'com.yunmall.ymctoc.ui.activity.MainActivity'
 
+    # 默认不重置
+    desired_caps['noReset'] = no_reset
     # toast
     desired_caps['automationName'] = 'Uiautomator2'
 

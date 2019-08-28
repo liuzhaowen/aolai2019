@@ -1,4 +1,5 @@
 from page.about_page import AboutPage
+from page.be_VIP_page import BeVIPPage
 from page.home_page import HomePage
 from page.login_page import LoginPage
 from page.me_page import MePage
@@ -34,3 +35,7 @@ class Page:
     @property
     def about(self):
         return AboutPage(self.driver)
+
+    @property
+    def be_vip(self):
+        return BeVIPPage(self.driver)
